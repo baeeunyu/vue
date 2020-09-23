@@ -16,20 +16,20 @@
 // @ is an alias to /src
 
 export default {
-  name: 'ListPage',
+  name: "ListPage",
   component: {},
   data() {
     return {
-      items: [{ message: 'Foo' }, { message: 'Bar' }],
+      items: [{ message: "Foo" }, { message: "Bar" }],
       object: {
-        title: 'How to do lists in Vue',
-        author: 'jane Doe',
-        puvlishedAt: '2016-4-10',
-      },
+        title: "How to do lists in Vue",
+        author: "jane Doe",
+        puvlishedAt: "2016-4-10"
+      }
     };
   },
   computed: {},
-  methods: {},
+  methods: {}
 };
 </script>
 <style lang="scss" scoped>

@@ -1,8 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import ListPage from "../views/ListPage.vue";
-import Event from "../views/Event.vue";
+import Playground from "../views/playGround.vue";
 
 Vue.use(VueRouter);
 
@@ -12,6 +11,11 @@ const routes = [{
     component: Home
   },
   {
+    path: "/playground",
+    name: "Playground",
+    component: Playground
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
@@ -19,26 +23,8 @@ const routes = [{
     // which is lazy-loaded when the route is visited.
     component: () =>
       import( /* webpackChunkName: "about" */ "../views/About.vue")
-  }, {
-    path: "/forif",
-    name: "forif",
-    component: () =>
-      import( /* webpackChunkName: "about" */ "../views/forif.vue")
-  }, {
-    path: "/if",
-    name: "if",
-    component: () =>
-      import("../views/if.vue")
-  }, {
-    path: "/List",
-    name: "List",
-    component: ListPage,
-  }, {
-    path: "/Event",
-    name: "Event",
-    component: Event,
-  },
-
+    //맨 위에 import 시켜서 일일이 불러오는 것 보다는 해당 영역(이 곳)에 import 하는 게 효율적
+  }
 ];
 
 const router = new VueRouter({

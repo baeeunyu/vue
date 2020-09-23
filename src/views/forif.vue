@@ -12,13 +12,13 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: 'ForIf',
+  name: "ForIf",
   components: {},
   data() {
     return { awesome: true, isElse: true };
   },
   computed: {},
-  methods: {},
+  methods: {}
 };
 </script>
 <style lang="scss" scoped></style>
