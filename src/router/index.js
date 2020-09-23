@@ -8,7 +8,11 @@ Vue.use(VueRouter);
 const routes = [{
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    children: [{
+      path: '/',
+      component: () => import('../views/main/Main.vue')
+    }, ],
   },
   {
     path: "/playground",

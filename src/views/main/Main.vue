@@ -1,19 +1,15 @@
 <template>
-    <div class="home">
-        <core-app-bar></core-app-bar>
-        <core-view></core-view>
-        <core-footer></core-footer>
+    <div class="Main">
+        <main-banner></main-banner>
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
 export default {
-    name: "Home",
+    name: "Main",
     components: {
-        CoreAppBar: () => import("@/components/core/AppBar.vue"),
-        CoreView: () => import("@/components/core/View.vue"),
-        CoreFooter: () => import("@/components/core/Footer.vue")
+        MainBanner: () => import("@/components/main/MainBanner.vue")
     }, //위에 import시킨 파일을 여기에 등록
     //그리고 html영역에 <이름 :msg="쓰고 싶은 메시지?">형식으로 쓰기
 
@@ -25,6 +21,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
+.Main {
 }
 </style>
